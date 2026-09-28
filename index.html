@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14181d">
 <title>انجمن سازندگان ذیصلاح ساختمان شهرستان ارومیه</title>
+<link rel="icon" href="logo.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" media="print" onload="this.media='all'">
 <style>
 :root{--ink:#e9eef3;--mute:#8f9ba8;--gold:#dcbc80;--line:#ffffff17}
@@ -15,11 +16,13 @@ body{font-family:Vazirmatn,Tahoma,sans-serif;color:var(--ink);line-height:1.65;f
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,#ffffff06 0 1px,transparent 1px 3px)}
 .wrap{position:relative;max-width:480px;width:100%;margin:0 auto;overflow-x:hidden}
 
-header{width:100%;text-align:center;position:relative;
-  padding:calc(env(safe-area-inset-top,0px) + 18px) 18px 16px;
+header{width:100%;position:relative;display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:calc(env(safe-area-inset-top,0px) + 14px) 16px 14px;
   background:linear-gradient(180deg,#39414b 0%,#1c2026 55%,#2a3038 100%);box-shadow:inset 0 1px 0 #ffffff30,0 8px 20px -10px #000}
 header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,#b8925a,#f5e2b8,#b8925a,transparent)}
-header h1{font-size:1rem;font-weight:800;line-height:1.7;color:#f3f6f9;text-shadow:0 1px 0 #000a}
+header img{width:56px;height:56px;flex:none;border-radius:50%;background:#fff;padding:2px;object-fit:cover;
+  border:2px solid #dcbc80;box-shadow:0 3px 10px #000a}
+header h1{font-size:.95rem;font-weight:800;line-height:1.7;color:#f3f6f9;text-shadow:0 1px 0 #000a;text-align:right}
 
 main{padding:16px 14px calc(env(safe-area-inset-bottom,0px) + 30px);display:grid;grid-template-columns:minmax(0,1fr);gap:14px;width:100%}
 main>*{min-width:0}
@@ -96,7 +99,7 @@ footer{text-align:center;color:var(--mute);font-size:.7rem}
 </head>
 <body>
 <div class="wrap">
-<header><h1>انجمن سازندگان ذیصلاح ساختمان شهرستان ارومیه</h1></header>
+<header><img src="logo.jpg" alt="لوگوی انجمن"><h1>انجمن سازندگان ذیصلاح ساختمان شهرستان ارومیه</h1></header>
 <main id="app"></main>
 </div>
 
