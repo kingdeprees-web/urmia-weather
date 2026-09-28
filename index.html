@@ -2,166 +2,166 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>انجمن سازندگان ذیصلاح ساختمان شهرستان ارومیه</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" media="print" onload="this.media='all'">
 <style>
-:root{
-  --bg1:#eaf3f7;--bg2:#f7efe9;--card:#ffffffcc;--ink:#12303f;--mute:#5d7885;--line:#12303f1a;
-  --lake:#0e5a7a;--salt:#f3d9d0;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg1:#0b1c26;--bg2:#1a1720;--card:#13293699;--ink:#e8f1f5;--mute:#93aab6;--line:#ffffff1f;--lake:#6cc3e3;--salt:#5b3b3b}
-}
+:root{--navy:#0b3a53;--teal:#1487a3;--salt:#f4e4dc;--bg:#f2f5f7;--ink:#14303d;--mute:#64808d;--line:#e3eaee}
 *{box-sizing:border-box;margin:0}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{
-  font-family:"Vazirmatn",Tahoma,sans-serif;color:var(--ink);min-height:100vh;
-  background:linear-gradient(170deg,var(--bg1) 0%,var(--bg2) 100%) fixed;
-  padding:0 0 env(safe-area-inset-bottom,0px);line-height:1.7;
-}
-header{
-  background:var(--lake);color:#fff;text-align:center;
-  padding:calc(env(safe-area-inset-top,0px) + 22px) 16px 22px;
-  border-bottom:6px solid var(--salt);
-}
-header h1{font-size:clamp(1.05rem,3.6vw,1.75rem);font-weight:800;letter-spacing:0}
-main{max-width:980px;margin:0 auto;padding:22px 16px 40px;display:grid;gap:16px}
-.card{background:var(--card);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:18px;padding:20px}
-.now{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
-.now .city{font-size:1.25rem;font-weight:600}
-.now .date{color:var(--mute);font-size:.9rem}
-.temp{font-size:clamp(4rem,16vw,6.5rem);font-weight:300;line-height:1}
-.temp small{font-size:.35em;font-weight:400;color:var(--mute)}
-.cond{font-size:1.1rem}
-.icon{font-size:clamp(4rem,14vw,6rem);line-height:1}
-.aqi-top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.aqi-top h2{font-size:1.1rem;font-weight:600}
-.aqi-val{font-size:3rem;font-weight:800;line-height:1}
-.aqi-label{font-size:1.15rem;font-weight:600}
-.scale{position:relative;height:16px;border-radius:99px;margin:22px 0 8px;
-  background:linear-gradient(to left,#7e0023 0%,#8f3f97 20%,#e8383d 40%,#ff7e00 60%,#f2c200 80%,#2e9e5b 100%)}
-.scale i{position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--card);
-  border:4px solid var(--ink);transform:translate(50%,-50%);transition:right .8s cubic-bezier(.2,.8,.2,1)}
-.ticks{display:flex;justify-content:space-between;color:var(--mute);font-size:.75rem;direction:ltr;flex-direction:row-reverse}
-.advice{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--salt);color:#3a2320;font-size:.95rem}
-@media (prefers-color-scheme:dark){.advice{color:#f3dcd7}}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-.cell{border:1px solid var(--line);border-radius:14px;padding:12px 14px}
-.cell span{display:block;color:var(--mute);font-size:.82rem}
-.cell b{font-size:1.25rem;font-weight:600}
-.cell em{font-style:normal;font-size:.75rem;color:var(--mute);margin-inline-start:4px}
-h3{font-size:1rem;font-weight:600;margin-bottom:12px}
-.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
-.day{text-align:center;border:1px solid var(--line);border-radius:14px;padding:12px 6px}
-.day .n{font-size:.9rem;color:var(--mute)}
-.day .e{font-size:1.9rem;line-height:1.4}
-.day .t{font-weight:600}
-.day .t small{color:var(--mute);font-weight:400}
-footer{text-align:center;color:var(--mute);font-size:.78rem;padding-top:4px}
-.msg{text-align:center;padding:40px 16px;color:var(--mute)}
-@media (prefers-reduced-motion:reduce){.scale i{transition:none}}
-:focus-visible{outline:3px solid var(--lake);outline-offset:2px}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding-bottom:env(safe-area-inset-bottom,0px)}
+header{background:var(--navy);color:#fff;text-align:center;border-bottom:5px solid var(--salt);
+  padding:calc(env(safe-area-inset-top,0px) + 20px) 16px 20px;
+  background-image:repeating-linear-gradient(45deg,#ffffff0a 0 12px,transparent 12px 24px)}
+header h1{font-size:clamp(1rem,3.4vw,1.6rem);font-weight:800}
+main{max-width:1000px;margin:0 auto;padding:18px 14px 36px;display:grid;gap:14px}
+.top{display:grid;grid-template-columns:1.15fr 1fr;gap:14px}
+@media(max-width:760px){.top{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 1px 3px #0b3a530d}
+.card h2{font-size:1rem;font-weight:600;margin-bottom:10px}
+.hero{border-radius:22px;color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:280px}
+.sunny{background:linear-gradient(160deg,#1a86c8,#63c4ea)}
+.cloudy{background:linear-gradient(160deg,#587687,#a3b8c5)}
+.rain{background:linear-gradient(160deg,#31485b,#6f889a)}
+.night{background:linear-gradient(160deg,#0b1f3d,#2b4682)}
+.hero .city{font-size:1.3rem;font-weight:800}
+.hero .date{opacity:.85;font-size:.88rem}
+.mid{display:flex;align-items:center;justify-content:space-between}
+.temp{font-size:clamp(4.5rem,15vw,6.5rem);font-weight:300;line-height:1}
+.emo{font-size:clamp(3.8rem,12vw,5.5rem);line-height:1}
+.cond{font-size:1.1rem;font-weight:600}
+.sub{opacity:.9;font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:#ffffff2b;border-radius:12px;padding:4px 12px;font-size:.85rem}
+.gauge{text-align:center}
+.gauge svg{width:100%;max-width:320px}
+.g-label{font-size:1.2rem;font-weight:800}
+.advice{margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--salt);color:#4a2b26;font-size:.9rem;text-align:right}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.cell{border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.cell span{display:block;color:var(--mute);font-size:.8rem}
+.cell b{font-size:1.2rem;font-weight:600}
+.cell em{font-style:normal;color:var(--mute);font-size:.72rem;margin-inline-start:4px}
+.hours{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
+.h{flex:0 0 62px;text-align:center;border:1px solid var(--line);border-radius:14px;padding:8px 0}
+.h small{display:block;color:var(--mute);font-size:.75rem}
+.h i{display:block;font-style:normal;font-size:1.5rem}
+.h b{font-weight:600}
+.row{display:grid;grid-template-columns:64px 34px 32px 1fr 32px;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.row .d{font-size:.9rem}
+.row .e{font-size:1.4rem;text-align:center}
+.row .lo{color:var(--mute);text-align:center}
+.row .hi{font-weight:600;text-align:center}
+.bar{position:relative;height:6px;border-radius:9px;background:#e6edf1;direction:rtl}
+.bar i{position:absolute;top:0;height:100%;border-radius:9px;background:linear-gradient(to left,#1487a3,#f2a33a)}
+.msg{text-align:center;padding:48px 16px;color:var(--mute)}
+.msg button{margin-top:14px;font:inherit;background:var(--navy);color:#fff;border:0;border-radius:12px;padding:8px 22px;cursor:pointer}
+.warn{color:var(--mute);text-align:center;padding:24px 8px}
+footer{text-align:center;color:var(--mute);font-size:.76rem}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 </style>
 </head>
 <body>
 <header><h1>انجمن سازندگان ذیصلاح ساختمان شهرستان ارومیه</h1></header>
-<main id="app"><div class="card msg">در حال دریافت اطلاعات…</div></main>
+<main id="app"></main>
 
 <script>
-const LAT = 37.5527, LON = 45.0761;
-const fa = (n, d = 0) => Number(n).toLocaleString("fa-IR", {maximumFractionDigits: d, minimumFractionDigits: d});
+const LAT=37.5527,LON=45.0761,app=document.getElementById("app");
+const fa=(n,d=0)=>Number(n).toLocaleString("fa-IR",{maximumFractionDigits:d,minimumFractionDigits:d});
+const WMO={0:["آسمان صاف","☀️"],1:["کمی ابری","🌤️"],2:["نیمه‌ابری","⛅"],3:["ابری","☁️"],45:["مه‌آلود","🌫️"],48:["مه یخ‌زده","🌫️"],
+51:["نم‌نم باران","🌦️"],53:["نم‌نم باران","🌦️"],55:["نم‌نم شدید","🌦️"],61:["باران ملایم","🌧️"],63:["باران","🌧️"],65:["باران شدید","🌧️"],
+66:["باران یخ‌زده","🌧️"],67:["باران یخ‌زده","🌧️"],71:["برف ملایم","🌨️"],73:["برف","❄️"],75:["برف سنگین","❄️"],77:["دانه‌های برف","❄️"],
+80:["رگبار","🌦️"],81:["رگبار","🌧️"],82:["رگبار شدید","⛈️"],85:["رگبار برف","🌨️"],86:["رگبار برف","🌨️"],95:["رعد و برق","⛈️"],96:["رعد و تگرگ","⛈️"],99:["رعد و تگرگ شدید","⛈️"]};
+const AQI=[["هوای پاک","#2e9e5b","کیفیت هوا مطلوب است و فعالیت در فضای باز مشکلی ندارد."],
+["قابل قبول","#d9a900","برای اغلب افراد مناسب است؛ افراد بسیار حساس مراقب باشند."],
+["ناسالم برای گروه‌های حساس","#ff7e00","کودکان، سالمندان و بیماران قلبی و تنفسی فعالیت طولانی در بیرون را کاهش دهند."],
+["ناسالم","#e8383d","همه افراد فعالیت سنگین در فضای باز را محدود کنند."],
+["بسیار ناسالم","#8f3f97","از فعالیت در فضای باز پرهیز و از ماسک استفاده کنید."],
+["خطرناک","#7e0023","شرایط اضطراری؛ در محیط بسته بمانید."]];
+const B=[0,50,100,150,200,300,500];
+const ico=(c,day=1)=>c<=1&&!day?"🌙":(WMO[c]||["","🌡️"])[1];
+const dir=d=>["شمال","شمال‌شرق","شرق","جنوب‌شرق","جنوب","جنوب‌غرب","غرب","شمال‌غرب"][Math.round(d/45)%8];
+const dname=s=>new Intl.DateTimeFormat("fa-IR",{weekday:"long"}).format(new Date(s+"T12:00:00"));
 
-const WMO = {
-  0:["آسمان صاف","☀️"],1:["کمی ابری","🌤️"],2:["نیمه‌ابری","⛅"],3:["ابری","☁️"],
-  45:["مه‌آلود","🌫️"],48:["مه یخ‌زده","🌫️"],
-  51:["نم‌نم باران","🌦️"],53:["نم‌نم باران","🌦️"],55:["نم‌نم شدید","🌦️"],
-  61:["باران ملایم","🌧️"],63:["باران","🌧️"],65:["باران شدید","🌧️"],
-  66:["باران یخ‌زده","🌧️"],67:["باران یخ‌زده","🌧️"],
-  71:["برف ملایم","🌨️"],73:["برف","❄️"],75:["برف سنگین","❄️"],77:["دانه‌های برف","❄️"],
-  80:["رگبار","🌦️"],81:["رگبار","🌧️"],82:["رگبار شدید","⛈️"],
-  85:["رگبار برف","🌨️"],86:["رگبار برف","🌨️"],
-  95:["رعد و برق","⛈️"],96:["رعد و تگرگ","⛈️"],99:["رعد و تگرگ شدید","⛈️"]
-};
-const AQI = [
-  [50,"هوای پاک","#2e9e5b","کیفیت هوا مطلوب است و فعالیت در فضای باز مشکلی ندارد."],
-  [100,"قابل قبول","#b89400","برای اغلب افراد مناسب است؛ افراد بسیار حساس مراقب باشند."],
-  [150,"ناسالم برای گروه‌های حساس","#ff7e00","کودکان، سالمندان و بیماران قلبی و تنفسی فعالیت طولانی در بیرون را کاهش دهند."],
-  [200,"ناسالم","#e8383d","همه افراد فعالیت سنگین در فضای باز را محدود کنند."],
-  [300,"بسیار ناسالم","#8f3f97","از فعالیت در فضای باز پرهیز و از ماسک استفاده کنید."],
-  [Infinity,"خطرناک","#7e0023","شرایط اضطراری؛ در محیط بسته بمانید."]
-];
-const aqiInfo = v => AQI.find(a => v <= a[0]);
+const WURL=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,weather_code,pressure_msl,wind_speed_10m,wind_direction_10m&hourly=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTehran&forecast_days=7`;
+const AURL=`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${LAT}&longitude=${LON}&current=us_aqi,pm2_5,pm10,ozone,nitrogen_dioxide,sulphur_dioxide,carbon_monoxide&timezone=Asia%2FTehran`;
 
-const wind = d => ["شمال","شمال‌شرق","شرق","جنوب‌شرق","جنوب","جنوب‌غرب","غرب","شمال‌غرب"][Math.round(d/45)%8];
-const dayName = s => new Intl.DateTimeFormat("fa-IR",{weekday:"long"}).format(new Date(s+"T12:00:00"));
-
-async function load(){
-  const w = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}`
-    + `&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,pressure_msl,wind_speed_10m,wind_direction_10m`
-    + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max`
-    + `&timezone=Asia%2FTehran&forecast_days=7`;
-  const a = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${LAT}&longitude=${LON}`
-    + `&current=us_aqi,pm2_5,pm10,ozone,nitrogen_dioxide,sulphur_dioxide,carbon_monoxide&timezone=Asia%2FTehran`;
-  const [W, A] = await Promise.all([fetch(w).then(r=>r.json()), fetch(a).then(r=>r.json())]);
-  render(W, A);
+async function get(u){
+  const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);
+  try{const r=await fetch(u,{signal:c.signal});if(!r.ok)throw new Error(r.status);return await r.json()}
+  finally{clearTimeout(t)}
 }
 
-function render(W, A){
-  const c = W.current, d = W.daily, q = A.current;
-  const [cond, emoji] = WMO[c.weather_code] || ["نامشخص","🌡️"];
-  const aq = Math.round(q.us_aqi), info = aqiInfo(aq);
-  const pos = Math.min(aq, 300) / 300 * 100;
-  const today = new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date());
-
-  const poll = [
-    ["ذرات PM2.5", q.pm2_5, "µg/m³"],["ذرات PM10", q.pm10, "µg/m³"],
-    ["ازن", q.ozone, "µg/m³"],["دی‌اکسید نیتروژن", q.nitrogen_dioxide, "µg/m³"],
-    ["دی‌اکسید گوگرد", q.sulphur_dioxide, "µg/m³"],["مونوکسید کربن", q.carbon_monoxide, "µg/m³"]
-  ].map(p => `<div class="cell"><span>${p[0]}</span><b>${fa(p[1],1)}</b><em>${p[2]}</em></div>`).join("");
-
-  const days = d.time.map((t,i)=>`
-    <div class="day"><div class="n">${i===0?"امروز":dayName(t)}</div>
-    <div class="e">${(WMO[d.weather_code[i]]||["","🌡️"])[1]}</div>
-    <div class="t">${fa(d.temperature_2m_max[i])}° <small>${fa(d.temperature_2m_min[i])}°</small></div>
-    <div class="n">🌧 ${fa(d.precipitation_probability_max[i]??0)}٪</div></div>`).join("");
-
-  document.getElementById("app").innerHTML = `
-  <section class="card now">
-    <div><div class="city">ارومیه</div><div class="date">${today}</div>
-      <div class="temp">${fa(c.temperature_2m)}<small>°C</small></div>
-      <div class="cond">${cond} · احساس واقعی ${fa(c.apparent_temperature)}°</div></div>
-    <div class="icon" aria-hidden="true">${emoji}</div>
-  </section>
-
-  <section class="card" aria-labelledby="aqh">
-    <div class="aqi-top"><h2 id="aqh">کیفیت هوا</h2><span class="aqi-label" style="color:${info[2]}">${info[1]}</span></div>
-    <div class="aqi-val" style="color:${info[2]}">${fa(aq)}</div>
-    <div class="scale" role="img" aria-label="شاخص کیفیت هوا ${fa(aq)}"><i style="right:${pos}%;border-color:${info[2]}"></i></div>
-    <div class="ticks"><span>۰</span><span>۵۰</span><span>۱۰۰</span><span>۱۵۰</span><span>۲۰۰</span><span>۳۰۰+</span></div>
-    <p class="advice">${info[3]}</p>
-    <h3 style="margin-top:18px">آلاینده‌ها</h3>
-    <div class="grid">${poll}</div>
-  </section>
-
-  <section class="card">
-    <h3>شرایط فعلی</h3>
-    <div class="grid">
-      <div class="cell"><span>رطوبت</span><b>${fa(c.relative_humidity_2m)}٪</b></div>
-      <div class="cell"><span>باد</span><b>${fa(c.wind_speed_10m)}</b><em>km/h ${wind(c.wind_direction_10m)}</em></div>
-      <div class="cell"><span>فشار هوا</span><b>${fa(c.pressure_msl)}</b><em>hPa</em></div>
-    </div>
-  </section>
-
-  <section class="card"><h3>پیش‌بینی هفت روز آینده</h3><div class="days">${days}</div></section>
-  <footer>داده‌ها از Open-Meteo · شاخص کیفیت هوا بر پایه استاندارد US AQI</footer>`;
+async function load(first=true){
+  if(first)app.innerHTML='<div class="msg">در حال دریافت اطلاعات…</div>';
+  const [w,a]=await Promise.allSettled([get(WURL),get(AURL)]);
+  if(w.status!=="fulfilled"&&a.status!=="fulfilled"){
+    if(first)app.innerHTML='<div class="msg">اتصال به سرور اطلاعات برقرار نشد.<br>اینترنت (یا فیلترشکن) را بررسی کنید.<br><button onclick="load()">تلاش دوباره</button></div>';
+    return;
+  }
+  render(w.value,a.value);
 }
 
-load().catch(() => {
-  document.getElementById("app").innerHTML = `<div class="card msg">دریافت اطلاعات ممکن نشد. اتصال اینترنت را بررسی و صفحه را دوباره باز کنید.</div>`;
-});
-setInterval(() => load().catch(()=>{}), 15 * 60 * 1000);
+function hero(W){
+  if(!W)return '<div class="hero night"><div class="warn" style="color:#fff">اطلاعات آب‌وهوا در دسترس نیست.</div></div>';
+  const c=W.current,d=W.daily,cond=(WMO[c.weather_code]||["نامشخص"])[0];
+  const cls=!c.is_day?"night":c.weather_code>=51?"rain":c.weather_code>=3?"cloudy":"sunny";
+  const today=new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date());
+  return `<section class="hero ${cls}">
+    <div><div class="city">ارومیه</div><div class="date">${today}</div></div>
+    <div class="mid"><div class="temp">${fa(c.temperature_2m)}°</div><div class="emo" aria-hidden="true">${ico(c.weather_code,c.is_day)}</div></div>
+    <div><div class="cond">${cond}</div>
+      <div class="sub">بیشینه ${fa(d.temperature_2m_max[0])}° · کمینه ${fa(d.temperature_2m_min[0])}° · احساس ${fa(c.apparent_temperature)}°</div></div>
+    <div class="chips"><span>رطوبت ${fa(c.relative_humidity_2m)}٪</span><span>باد ${fa(c.wind_speed_10m)} km/h ${dir(c.wind_direction_10m)}</span><span>فشار ${fa(c.pressure_msl)} hPa</span></div>
+  </section>`;
+}
+
+function gauge(A){
+  if(!A)return '<section class="card"><h2>کیفیت هوا</h2><div class="warn">اطلاعات کیفیت هوا در دسترس نیست.</div></section>';
+  const q=A.current,v=Math.round(q.us_aqi);
+  let i=B.findIndex((b,k)=>v<B[k+1]);if(i<0)i=5;
+  const t=Math.min(180,i*30+(v-B[i])/(B[i+1]-B[i])*30),inf=AQI[i];
+  const P=(a,r=120)=>[150+r*Math.cos(a*Math.PI/180),150-r*Math.sin(a*Math.PI/180)];
+  const arcs=AQI.map((x,k)=>{const [x0,y0]=P(k*30+1),[x1,y1]=P(k*30+29);
+    return `<path d="M${x0} ${y0}A120 120 0 0 0 ${x1} ${y1}" stroke="${x[1]}" stroke-width="20" fill="none"/>`}).join("");
+  const [mx,my]=P(t);
+  return `<section class="card gauge"><h2>کیفیت هوا</h2>
+    <svg viewBox="0 0 300 170" role="img" aria-label="شاخص کیفیت هوا ${fa(v)}">${arcs}
+      <circle cx="${mx}" cy="${my}" r="12" fill="#fff" stroke="#14303d" stroke-width="4"/>
+      <text x="150" y="140" text-anchor="middle" font-size="52" font-weight="800" fill="${inf[1]}" font-family="Vazirmatn,Tahoma">${fa(v)}</text></svg>
+    <div class="g-label" style="color:${inf[1]}">${inf[0]}</div>
+    <div class="advice">${inf[2]}</div></section>`;
+}
+
+function pollutants(A){
+  if(!A)return "";const q=A.current;
+  const L=[["ذرات PM2.5",q.pm2_5],["ذرات PM10",q.pm10],["ازن",q.ozone],["دی‌اکسید نیتروژن",q.nitrogen_dioxide],["دی‌اکسید گوگرد",q.sulphur_dioxide],["مونوکسید کربن",q.carbon_monoxide]];
+  return `<section class="card"><h2>آلاینده‌های هوا</h2><div class="pgrid">${L.map(p=>`<div class="cell"><span>${p[0]}</span><b>${fa(p[1],1)}</b><em>µg/m³</em></div>`).join("")}</div></section>`;
+}
+
+function hours(W){
+  if(!W)return "";const H=W.hourly,i0=Math.max(0,H.time.findIndex(t=>t>=W.current.time.slice(0,13)));
+  const items=H.time.slice(i0,i0+24).map((t,k)=>{const h=+t.slice(11,13);
+    return `<div class="h"><small>${k===0?"اکنون":fa(h)+":۰۰"}</small><i>${ico(H.weather_code[i0+k],h>=6&&h<19)}</i><b>${fa(H.temperature_2m[i0+k])}°</b></div>`}).join("");
+  return `<section class="card"><h2>ساعت به ساعت</h2><div class="hours">${items}</div></section>`;
+}
+
+function days(W){
+  if(!W)return "";const d=W.daily,mn=Math.min(...d.temperature_2m_min),mx=Math.max(...d.temperature_2m_max),r=(mx-mn)||1;
+  const rows=d.time.map((t,i)=>{const lo=d.temperature_2m_min[i],hi=d.temperature_2m_max[i];
+    return `<div class="row"><div class="d">${i===0?"امروز":dname(t)}</div><div class="e">${ico(d.weather_code[i])}</div>
+    <div class="hi">${fa(hi)}°</div><div class="bar"><i style="right:${(lo-mn)/r*100}%;width:${Math.max(6,(hi-lo)/r*100)}%"></i></div><div class="lo">${fa(lo)}°</div></div>`}).join("");
+  return `<section class="card"><h2>پیش‌بینی هفت روز آینده</h2>${rows}</section>`;
+}
+
+function render(W,A){
+  const now=new Date().toLocaleTimeString("fa-IR",{hour:"2-digit",minute:"2-digit"});
+  app.innerHTML=`<div class="top">${hero(W)}${gauge(A)}</div>${pollutants(A)}${hours(W)}${days(W)}
+  <footer>داده‌ها از Open-Meteo · شاخص کیفیت هوا بر پایه استاندارد US AQI · آخرین به‌روزرسانی ${now}</footer>`;
+}
+
+load();
+setInterval(()=>load(false),15*60*1000);
 </script>
 </body>
-  </html>
+</html>
