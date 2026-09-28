@@ -6,54 +6,52 @@
 <title>انجمن سازندگان ذیصلاح ساختمان شهرستان ارومیه</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" media="print" onload="this.media='all'">
 <style>
-:root{--navy:#0b3a53;--teal:#1487a3;--salt:#f4e4dc;--bg:#f2f5f7;--ink:#14303d;--mute:#64808d;--line:#e3eaee}
+:root{--navy:#0a2540;--navy2:#123a5e;--teal:#0e9fbc;--salt:#f3e3da;--bg:#eef2f6;--ink:#122a3d;--mute:#6b8394;--line:#e1e8ee}
 *{box-sizing:border-box;margin:0}
 body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding-bottom:env(safe-area-inset-bottom,0px)}
-header{background:var(--navy);color:#fff;text-align:center;border-bottom:5px solid var(--salt);
-  padding:calc(env(safe-area-inset-top,0px) + 20px) 16px 20px;
-  background-image:repeating-linear-gradient(45deg,#ffffff0a 0 12px,transparent 12px 24px)}
-header h1{font-size:clamp(1rem,3.4vw,1.6rem);font-weight:800}
-main{max-width:1000px;margin:0 auto;padding:18px 14px 36px;display:grid;gap:14px}
-.top{display:grid;grid-template-columns:1.15fr 1fr;gap:14px}
-@media(max-width:760px){.top{grid-template-columns:1fr}}
-.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 1px 3px #0b3a530d}
-.card h2{font-size:1rem;font-weight:600;margin-bottom:10px}
-.hero{border-radius:22px;color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:280px}
-.sunny{background:linear-gradient(160deg,#1a86c8,#63c4ea)}
-.cloudy{background:linear-gradient(160deg,#587687,#a3b8c5)}
-.rain{background:linear-gradient(160deg,#31485b,#6f889a)}
-.night{background:linear-gradient(160deg,#0b1f3d,#2b4682)}
-.hero .city{font-size:1.3rem;font-weight:800}
-.hero .date{opacity:.85;font-size:.88rem}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;text-align:center;border-bottom:4px solid var(--salt);
+  padding:calc(env(safe-area-inset-top,0px) + 20px) 16px 20px}
+header h1{font-size:clamp(1rem,3.4vw,1.55rem);font-weight:800}
+main{max-width:1080px;margin:0 auto;padding:18px 14px 36px;display:grid;gap:14px}
+.top{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+@media(max-width:780px){.top{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h2{font-size:.98rem;font-weight:600;margin-bottom:14px;color:var(--navy)}
+.hero{border-radius:18px;color:#fff;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:300px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset-inline-start:-80px;bottom:-120px;width:320px;height:320px;border-radius:50%;background:#ffffff12}
+.sunny{background:linear-gradient(150deg,#0d6fb8,#3fb4dd)}
+.cloudy{background:linear-gradient(150deg,#4a6578,#8ea5b4)}
+.rain{background:linear-gradient(150deg,#26394a,#5d7789)}
+.night{background:linear-gradient(150deg,#081a33,#28437a)}
+.hero>*{position:relative;z-index:1}
+.city{font-size:1.35rem;font-weight:800}
+.date{opacity:.85;font-size:.86rem}
 .mid{display:flex;align-items:center;justify-content:space-between}
-.temp{font-size:clamp(4.5rem,15vw,6.5rem);font-weight:300;line-height:1}
-.emo{font-size:clamp(3.8rem,12vw,5.5rem);line-height:1}
-.cond{font-size:1.1rem;font-weight:600}
+.temp{font-size:clamp(4.6rem,15vw,7rem);font-weight:300;line-height:1}
+.emo{font-size:clamp(3.8rem,12vw,5.6rem);line-height:1}
+.cond{font-size:1.15rem;font-weight:600}
 .sub{opacity:.9;font-size:.9rem}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{background:#ffffff2b;border-radius:12px;padding:4px 12px;font-size:.85rem}
 .gauge{text-align:center}
-.gauge svg{width:100%;max-width:320px}
-.g-label{font-size:1.2rem;font-weight:800}
-.advice{margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--salt);color:#4a2b26;font-size:.9rem;text-align:right}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.cell{border:1px solid var(--line);border-radius:14px;padding:10px 14px}
-.cell span{display:block;color:var(--mute);font-size:.8rem}
-.cell b{font-size:1.2rem;font-weight:600}
-.cell em{font-style:normal;color:var(--mute);font-size:.72rem;margin-inline-start:4px}
-.hours{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
-.h{flex:0 0 62px;text-align:center;border:1px solid var(--line);border-radius:14px;padding:8px 0}
-.h small{display:block;color:var(--mute);font-size:.75rem}
-.h i{display:block;font-style:normal;font-size:1.5rem}
-.h b{font-weight:600}
-.row{display:grid;grid-template-columns:64px 34px 32px 1fr 32px;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.gauge svg{width:100%;max-width:300px}
+.g-label{font-size:1.15rem;font-weight:800}
+.advice{margin-top:12px;padding:10px 14px;border-radius:12px;background:var(--salt);color:#4a2b26;font-size:.88rem;text-align:right}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:780px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.tile span{display:block;color:var(--mute);font-size:.8rem}
+.tile b{font-size:1.3rem;font-weight:600}
+.tile em{font-style:normal;color:var(--mute);font-size:.75rem;margin-inline-start:4px}
+.tile small{display:block;color:var(--mute);font-size:.75rem}
+.scroll{overflow-x:auto}
+.chart{min-width:640px}
+.chart svg{width:100%;display:block}
+.row{display:grid;grid-template-columns:70px 34px 34px 1fr 34px 46px;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
 .row:last-child{border:0}
-.row .d{font-size:.9rem}
 .row .e{font-size:1.4rem;text-align:center}
-.row .lo{color:var(--mute);text-align:center}
 .row .hi{font-weight:600;text-align:center}
-.bar{position:relative;height:6px;border-radius:9px;background:#e6edf1;direction:rtl}
-.bar i{position:absolute;top:0;height:100%;border-radius:9px;background:linear-gradient(to left,#1487a3,#f2a33a)}
+.row .lo,.row .p{color:var(--mute);text-align:center;font-size:.9rem}
+.bar{position:relative;height:6px;border-radius:9px;background:#e6edf1}
+.bar i{position:absolute;top:0;height:100%;border-radius:9px;background:linear-gradient(to left,#0e9fbc,#f2a33a)}
 .msg{text-align:center;padding:48px 16px;color:var(--mute)}
 .msg button{margin-top:14px;font:inherit;background:var(--navy);color:#fff;border:0;border-radius:12px;padding:8px 22px;cursor:pointer}
 .warn{color:var(--mute);text-align:center;padding:24px 8px}
@@ -67,6 +65,7 @@ footer{text-align:center;color:var(--mute);font-size:.76rem}
 
 <script>
 const LAT=37.5527,LON=45.0761,app=document.getElementById("app");
+const D="۰۱۲۳۴۵۶۷۸۹",faS=s=>String(s).replace(/\d/g,d=>D[d]);
 const fa=(n,d=0)=>Number(n).toLocaleString("fa-IR",{maximumFractionDigits:d,minimumFractionDigits:d});
 const WMO={0:["آسمان صاف","☀️"],1:["کمی ابری","🌤️"],2:["نیمه‌ابری","⛅"],3:["ابری","☁️"],45:["مه‌آلود","🌫️"],48:["مه یخ‌زده","🌫️"],
 51:["نم‌نم باران","🌦️"],53:["نم‌نم باران","🌦️"],55:["نم‌نم شدید","🌦️"],61:["باران ملایم","🌧️"],63:["باران","🌧️"],65:["باران شدید","🌧️"],
@@ -82,16 +81,16 @@ const B=[0,50,100,150,200,300,500];
 const ico=(c,day=1)=>c<=1&&!day?"🌙":(WMO[c]||["","🌡️"])[1];
 const dir=d=>["شمال","شمال‌شرق","شرق","جنوب‌شرق","جنوب","جنوب‌غرب","غرب","شمال‌غرب"][Math.round(d/45)%8];
 const dname=s=>new Intl.DateTimeFormat("fa-IR",{weekday:"long"}).format(new Date(s+"T12:00:00"));
+const uv=v=>v<3?"کم":v<6?"متوسط":v<8?"زیاد":v<11?"بسیار زیاد":"شدید";
 
-const WURL=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,weather_code,pressure_msl,wind_speed_10m,wind_direction_10m&hourly=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTehran&forecast_days=7`;
-const AURL=`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${LAT}&longitude=${LON}&current=us_aqi,pm2_5,pm10,ozone,nitrogen_dioxide,sulphur_dioxide,carbon_monoxide&timezone=Asia%2FTehran`;
+const WURL=`https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,weather_code,pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max,sunrise,sunset&timezone=Asia%2FTehran&forecast_days=7`;
+const AURL=`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${LAT}&longitude=${LON}&current=us_aqi&timezone=Asia%2FTehran`;
 
 async function get(u){
   const c=new AbortController(),t=setTimeout(()=>c.abort(),12000);
   try{const r=await fetch(u,{signal:c.signal});if(!r.ok)throw new Error(r.status);return await r.json()}
   finally{clearTimeout(t)}
 }
-
 async function load(first=true){
   if(first)app.innerHTML='<div class="msg">در حال دریافت اطلاعات…</div>';
   const [w,a]=await Promise.allSettled([get(WURL),get(AURL)]);
@@ -103,7 +102,7 @@ async function load(first=true){
 }
 
 function hero(W){
-  if(!W)return '<div class="hero night"><div class="warn" style="color:#fff">اطلاعات آب‌وهوا در دسترس نیست.</div></div>';
+  if(!W)return '<section class="hero night"><div class="warn" style="color:#fff">اطلاعات آب‌وهوا در دسترس نیست.</div></section>';
   const c=W.current,d=W.daily,cond=(WMO[c.weather_code]||["نامشخص"])[0];
   const cls=!c.is_day?"night":c.weather_code>=51?"rain":c.weather_code>=3?"cloudy":"sunny";
   const today=new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date());
@@ -112,54 +111,71 @@ function hero(W){
     <div class="mid"><div class="temp">${fa(c.temperature_2m)}°</div><div class="emo" aria-hidden="true">${ico(c.weather_code,c.is_day)}</div></div>
     <div><div class="cond">${cond}</div>
       <div class="sub">بیشینه ${fa(d.temperature_2m_max[0])}° · کمینه ${fa(d.temperature_2m_min[0])}° · احساس ${fa(c.apparent_temperature)}°</div></div>
-    <div class="chips"><span>رطوبت ${fa(c.relative_humidity_2m)}٪</span><span>باد ${fa(c.wind_speed_10m)} km/h ${dir(c.wind_direction_10m)}</span><span>فشار ${fa(c.pressure_msl)} hPa</span></div>
   </section>`;
 }
 
 function gauge(A){
   if(!A)return '<section class="card"><h2>کیفیت هوا</h2><div class="warn">اطلاعات کیفیت هوا در دسترس نیست.</div></section>';
-  const q=A.current,v=Math.round(q.us_aqi);
+  const v=Math.round(A.current.us_aqi);
   let i=B.findIndex((b,k)=>v<B[k+1]);if(i<0)i=5;
   const t=Math.min(180,i*30+(v-B[i])/(B[i+1]-B[i])*30),inf=AQI[i];
   const P=(a,r=120)=>[150+r*Math.cos(a*Math.PI/180),150-r*Math.sin(a*Math.PI/180)];
   const arcs=AQI.map((x,k)=>{const [x0,y0]=P(k*30+1),[x1,y1]=P(k*30+29);
-    return `<path d="M${x0} ${y0}A120 120 0 0 0 ${x1} ${y1}" stroke="${x[1]}" stroke-width="20" fill="none"/>`}).join("");
+    return `<path d="M${x0} ${y0}A120 120 0 0 0 ${x1} ${y1}" stroke="${x[1]}" stroke-width="18" fill="none" stroke-linecap="round"/>`}).join("");
   const [mx,my]=P(t);
   return `<section class="card gauge"><h2>کیفیت هوا</h2>
-    <svg viewBox="0 0 300 170" role="img" aria-label="شاخص کیفیت هوا ${fa(v)}">${arcs}
-      <circle cx="${mx}" cy="${my}" r="12" fill="#fff" stroke="#14303d" stroke-width="4"/>
-      <text x="150" y="140" text-anchor="middle" font-size="52" font-weight="800" fill="${inf[1]}" font-family="Vazirmatn,Tahoma">${fa(v)}</text></svg>
+    <svg viewBox="0 0 300 165" role="img" aria-label="شاخص کیفیت هوا ${fa(v)}">${arcs}
+      <circle cx="${mx}" cy="${my}" r="11" fill="#fff" stroke="#122a3d" stroke-width="4"/>
+      <text x="150" y="138" text-anchor="middle" font-size="50" font-weight="800" fill="${inf[1]}" font-family="Vazirmatn,Tahoma">${fa(v)}</text></svg>
     <div class="g-label" style="color:${inf[1]}">${inf[0]}</div>
     <div class="advice">${inf[2]}</div></section>`;
 }
 
-function pollutants(A){
-  if(!A)return "";const q=A.current;
-  const L=[["ذرات PM2.5",q.pm2_5],["ذرات PM10",q.pm10],["ازن",q.ozone],["دی‌اکسید نیتروژن",q.nitrogen_dioxide],["دی‌اکسید گوگرد",q.sulphur_dioxide],["مونوکسید کربن",q.carbon_monoxide]];
-  return `<section class="card"><h2>آلاینده‌های هوا</h2><div class="pgrid">${L.map(p=>`<div class="cell"><span>${p[0]}</span><b>${fa(p[1],1)}</b><em>µg/m³</em></div>`).join("")}</div></section>`;
+function tiles(W){
+  if(!W)return "";const c=W.current,d=W.daily;
+  const T=[["رطوبت",fa(c.relative_humidity_2m)+"٪",""],
+    ["باد",fa(c.wind_speed_10m),`km/h ${dir(c.wind_direction_10m)}`,`وزش تا ${fa(c.wind_gusts_10m)} km/h`],
+    ["فشار هوا",fa(c.pressure_msl),"hPa"],
+    ["احتمال بارش",fa(d.precipitation_probability_max[0]??0)+"٪",""],
+    ["شاخص UV",fa(d.uv_index_max[0],1),"",uv(d.uv_index_max[0])],
+    ["طلوع آفتاب",faS(d.sunrise[0].slice(11,16)),""],
+    ["غروب آفتاب",faS(d.sunset[0].slice(11,16)),""],
+    ["دمای احساسی",fa(c.apparent_temperature)+"°",""]];
+  return `<div class="tiles">${T.map(x=>`<div class="tile"><span>${x[0]}</span><b>${x[1]}</b>${x[2]?`<em>${x[2]}</em>`:""}${x[3]?`<small>${x[3]}</small>`:""}</div>`).join("")}</div>`;
 }
 
 function hours(W){
   if(!W)return "";const H=W.hourly,i0=Math.max(0,H.time.findIndex(t=>t>=W.current.time.slice(0,13)));
-  const items=H.time.slice(i0,i0+24).map((t,k)=>{const h=+t.slice(11,13);
-    return `<div class="h"><small>${k===0?"اکنون":fa(h)+":۰۰"}</small><i>${ico(H.weather_code[i0+k],h>=6&&h<19)}</i><b>${fa(H.temperature_2m[i0+k])}°</b></div>`}).join("");
-  return `<section class="card"><h2>ساعت به ساعت</h2><div class="hours">${items}</div></section>`;
+  const n=24,vals=H.temperature_2m.slice(i0,i0+n),codes=H.weather_code.slice(i0,i0+n),tms=H.time.slice(i0,i0+n);
+  const mn=Math.min(...vals),mx=Math.max(...vals),r=(mx-mn)||1,w=720,h=190,px=28,top=50,bot=40;
+  const X=k=>w-px-k*(w-2*px)/(n-1),Y=v=>top+(mx-v)/r*(h-top-bot);
+  const pts=vals.map((v,k)=>[X(k),Y(v)]),line=pts.map((p,k)=>(k?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)).join("");
+  const area=line+`L${pts[n-1][0]} ${h-bot+8}L${pts[0][0]} ${h-bot+8}Z`;
+  let s="";
+  pts.forEach((p,k)=>{if(k%3)return;const hr=+tms[k].slice(11,13);
+    s+=`<circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="#fff" stroke="#0e9fbc" stroke-width="2.5"/>
+    <text x="${p[0]}" y="${p[1]-14}" text-anchor="middle" font-size="15" font-weight="600" fill="#122a3d" font-family="Vazirmatn,Tahoma">${fa(vals[k])}°</text>
+    <text x="${p[0]}" y="${h-20}" text-anchor="middle" font-size="18">${ico(codes[k],hr>=6&&hr<19)}</text>
+    <text x="${p[0]}" y="${h-2}" text-anchor="middle" font-size="12" fill="#6b8394" font-family="Vazirmatn,Tahoma">${k?faS(String(hr).padStart(2,"0"))+":۰۰":"اکنون"}</text>`});
+  return `<section class="card"><h2>دمای ۲۴ ساعت آینده</h2><div class="scroll"><div class="chart">
+    <svg viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e9fbc" stop-opacity=".28"/><stop offset="1" stop-color="#0e9fbc" stop-opacity="0"/></linearGradient></defs>
+    <path d="${area}" fill="url(#g)"/><path d="${line}" fill="none" stroke="#0e9fbc" stroke-width="3" stroke-linejoin="round"/>${s}</svg></div></div></section>`;
 }
 
 function days(W){
   if(!W)return "";const d=W.daily,mn=Math.min(...d.temperature_2m_min),mx=Math.max(...d.temperature_2m_max),r=(mx-mn)||1;
   const rows=d.time.map((t,i)=>{const lo=d.temperature_2m_min[i],hi=d.temperature_2m_max[i];
-    return `<div class="row"><div class="d">${i===0?"امروز":dname(t)}</div><div class="e">${ico(d.weather_code[i])}</div>
-    <div class="hi">${fa(hi)}°</div><div class="bar"><i style="right:${(lo-mn)/r*100}%;width:${Math.max(6,(hi-lo)/r*100)}%"></i></div><div class="lo">${fa(lo)}°</div></div>`}).join("");
+    return `<div class="row"><div>${i===0?"امروز":dname(t)}</div><div class="e">${ico(d.weather_code[i])}</div>
+    <div class="lo">${fa(lo)}°</div><div class="bar"><i style="right:${(lo-mn)/r*100}%;width:${Math.max(6,(hi-lo)/r*100)}%"></i></div>
+    <div class="hi">${fa(hi)}°</div><div class="p">🌧 ${fa(d.precipitation_probability_max[i]??0)}٪</div></div>`}).join("");
   return `<section class="card"><h2>پیش‌بینی هفت روز آینده</h2>${rows}</section>`;
 }
 
 function render(W,A){
   const now=new Date().toLocaleTimeString("fa-IR",{hour:"2-digit",minute:"2-digit"});
-  app.innerHTML=`<div class="top">${hero(W)}${gauge(A)}</div>${pollutants(A)}${hours(W)}${days(W)}
+  app.innerHTML=`<div class="top">${hero(W)}${gauge(A)}</div>${tiles(W)}${hours(W)}${days(W)}
   <footer>داده‌ها از Open-Meteo · شاخص کیفیت هوا بر پایه استاندارد US AQI · آخرین به‌روزرسانی ${now}</footer>`;
 }
-
 load();
 setInterval(()=>load(false),15*60*1000);
 </script>
